@@ -50,7 +50,7 @@ class Person
     end
     def take_bath
         new_hygiene = @hygiene + 4
-        self.hygiene = new_hygiene 
+        self.hygiene = new_hygiene
         "♪ Rub-a-dub just relaxing in the tub ♫"
     end
     def work_out
@@ -61,25 +61,13 @@ class Person
         "♪ another one bites the dust ♫"
     end
     def call_friend(name)
-        # friend = Person.new(name)
-        # friends_happiness = friend.happiness
-        name.happiness += 3
+        friend = Person.new(name)
+        friends_happiness = 5
+        puts friend.happiness = friends_happiness+3
         new_happiness = @happiness+3
         self.happiness = new_happiness
-        "Hi #{name.name}! It's #{@name}. How are you?"
-    end
-    def start_conversation(person,topic)
-        if topic == "politics"
-            new_happiness=@happiness-2
-            self.happiness = new_happiness
-            person.happiness -= 2 
-            'blah blah partisan blah lobbyist'
-        elsif topic == "weather"
-            person.happiness += 1
-            self.happiness += 1
-            'blah blah sun blah rain'
-        elsif topic != 'poliics' && topic != 'weather'
-            'blah blah blah blah blah'
-        end
+        "Hi Felix! It's Stella. How are you?"
     end
 end
+Stella = Person.new("Stella")
+Stella.call_friend("Felix")
